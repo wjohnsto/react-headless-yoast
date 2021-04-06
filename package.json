@@ -3,6 +3,7 @@
   "version": "0.0.6",
   "description": "A React component that handles Yoast SEO in a Headless WordPress site.",
   "main": "./Seo.js",
+  "types": "./Seo.d.ts",
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc -p . && esbuild ./src/Seo.js --bundle --minify --external:react --platform=neutral --outfile=Seo.js && move-cli ./src/Seo.d.ts Seo.d.ts",
