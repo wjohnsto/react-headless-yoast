@@ -1,4 +1,8 @@
 src/
+.prettierrc.js
+.eslintrc.js
+.gitignore
+README.md
 
 # Logs
 logs

@@ -7,7 +7,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "build": "tsc -p . && esbuild ./src/Seo.js --bundle --external:react --platform=node --outfile=Seo.js && move-cli ./src/Seo.d.ts Seo.d.ts",
-    "lint": "tsc --noEmit -p . && eslint **/*.{ts,tsx} --parser-options=project:tsconfig.json --quiet --fix",
+    "lint": "tsc --noEmit -p . && eslint src/*.{ts,tsx} --parser-options=project:tsconfig.json --quiet --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -34,10 +34,13 @@
     "@typescript-eslint/parser": "^4.21.0",
     "esbuild": "^0.11.5",
     "eslint": "^7.23.0",
+    "eslint-config-airbnb-typescript": "^12.3.1",
+    "eslint-config-prettier": "^8.1.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "eslint-plugin-prettier": "^3.3.1",
     "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "mintility": "^0.3.4",
     "move-cli": "^1.2.1",

@@ -3,7 +3,6 @@ import isFunction from 'mintility/dist/isFunction';
 import isObject from 'mintility/dist/isObject';
 import isString from 'mintility/dist/isString';
 
-
 export interface PageSchemaItem {
   '@type': any;
   '@id': string;
