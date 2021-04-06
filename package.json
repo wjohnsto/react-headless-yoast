@@ -6,7 +6,7 @@
   "types": "./Seo.d.ts",
   "scripts": {
     "prepublishOnly": "npm run build",
-    "build": "tsc -p . && esbuild ./src/Seo.js --bundle --minify --external:react --platform=node --outfile=Seo.js && move-cli ./src/Seo.d.ts Seo.d.ts",
+    "build": "tsc -p . && move-cli ./src/Seo.d.ts Seo.d.ts && move-cli ./src/Seo.js Seo.js",
     "lint": "tsc --noEmit -p . && eslint **/*.{ts,tsx} --parser-options=project:tsconfig.json --quiet --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
