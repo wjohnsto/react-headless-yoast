@@ -1,0 +1,47 @@
+{
+  "name": "react-headless-yoast",
+  "version": "0.0.1",
+  "description": "A React component that handles Yoast SEO in a Headless WordPress site.",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild ./src/Seo.tsx --tsconfig=tsconfig.json --bundle --minify --external:react --outfile=index.js",
+    "lint": "tsc --noEmit -p . && eslint **/*.{ts,tsx} --parser-options=project:tsconfig.json --quiet --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wjohnsto/react-headless-yoast.git"
+  },
+  "keywords": [
+    "react",
+    "yoast",
+    "seo",
+    "headless",
+    "wordpress"
+  ],
+  "author": "Will Johnston",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wjohnsto/react-headless-yoast/issues"
+  },
+  "homepage": "https://github.com/wjohnsto/react-headless-yoast#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.37",
+    "@types/react": "^17.0.3",
+    "@typescript-eslint/eslint-plugin": "^4.21.0",
+    "@typescript-eslint/parser": "^4.21.0",
+    "esbuild": "^0.11.5",
+    "eslint": "^7.23.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.23.1",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "mintility": "^0.3.4",
+    "prettier": "^2.2.1",
+    "typescript": "^4.2.3"
+  },
+  "peerDependencies": {
+    "react": "^17.x"
+  }
+}
