@@ -4,6 +4,7 @@
   "description": "A React component that handles Yoast SEO in a Headless WordPress site.",
   "main": "index.js",
   "scripts": {
+    "prepublish": "npm run build",
     "build": "esbuild ./src/Seo.tsx --tsconfig=tsconfig.json --bundle --minify --external:react --outfile=index.js",
     "lint": "tsc --noEmit -p . && eslint **/*.{ts,tsx} --parser-options=project:tsconfig.json --quiet --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
