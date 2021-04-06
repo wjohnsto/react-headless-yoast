@@ -2,10 +2,10 @@
   "name": "react-headless-yoast",
   "version": "0.0.4",
   "description": "A React component that handles Yoast SEO in a Headless WordPress site.",
-  "main": "index.js",
+  "main": "./Seo.js",
   "scripts": {
     "prepublish": "npm run build",
-    "build": "esbuild ./src/Seo.tsx --tsconfig=tsconfig.json --bundle --minify --external:react --platform=neutral --outfile=index.js",
+    "build": "tsc -p . && esbuild ./src/Seo.js --bundle --minify --external:react --platform=neutral --outfile=Seo.js && move-cli ./src/Seo.d.ts Seo.d.ts",
     "lint": "tsc --noEmit -p . && eslint **/*.{ts,tsx} --parser-options=project:tsconfig.json --quiet --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -39,6 +39,7 @@
     "eslint-plugin-react": "^7.23.1",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "mintility": "^0.3.4",
+    "move-cli": "^1.2.1",
     "prettier": "^2.2.1",
     "typescript": "^4.2.3"
   },
