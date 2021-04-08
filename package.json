@@ -1,6 +1,6 @@
 {
   "name": "react-headless-yoast",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A React component that handles Yoast SEO in a Headless WordPress site.",
   "main": "./Seo.js",
   "types": "./Seo.d.ts",
