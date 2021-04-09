@@ -28,11 +28,7 @@ export interface PageSchema {
 
 export interface SiteSchema {
   companyName: string;
-  companyLogo?: {
-    altText: string;
-    sourceUrl: string;
-    srcSet: string;
-  };
+  companyLogo?: SeoImage;
   inLanguage?: string;
   siteName?: string;
   siteUrl?: string;
@@ -105,11 +101,7 @@ export interface PageSeo {
     metaRobotsNoindex?: string;
     opengraphAuthor?: string;
     opengraphDescription?: string;
-    opengraphImage?: {
-      altText: string;
-      srcSet: string;
-      sourceUrl: string;
-    };
+    opengraphImage?: SeoImage;
     opengraphModifiedTime?: string;
     opengraphPublishedTime?: string;
     opengraphPublisher?: string;
@@ -120,11 +112,7 @@ export interface PageSeo {
     readingTime?: string;
     title?: string;
     twitterDescription?: string;
-    twitterImage?: {
-      altText: string;
-      srcSet: string;
-      sourceUrl: string;
-    };
+    twitterImage?: SeoImage;
     twitterTitle?: string;
   };
   author?: {
