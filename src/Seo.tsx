@@ -152,17 +152,17 @@ export function postToSeoOptions(
   siteSchema?: SiteSchema | string,
 ): SeoOptions {
   const { seo } = page;
-  let pageSchemaObject = (isString(pageSchema)
-    ? JSON.parse(pageSchema)
-    : pageSchema) as PageSchema | undefined;
+  let pageSchemaObject = (
+    isString(pageSchema) ? JSON.parse(pageSchema) : pageSchema
+  ) as PageSchema | undefined;
 
   if (!isObject(pageSchemaObject) && isString(seo?.schema?.raw)) {
     pageSchemaObject = JSON.parse(seo?.schema?.raw ?? '') as PageSchema;
   }
 
-  const siteSchemaObject = (isString(siteSchema)
-    ? JSON.parse(siteSchema)
-    : siteSchema) as SiteSchema | undefined;
+  const siteSchemaObject = (
+    isString(siteSchema) ? JSON.parse(siteSchema) : siteSchema
+  ) as SiteSchema | undefined;
 
   const title =
     page.title ||
